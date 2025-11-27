@@ -6,4 +6,24 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="compilerconfig.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="compilerconfig.json" />
+    <None Include="wwwroot\lib\splide-4.1.3\.github\FUNDING.yml" />
+    <None Include="wwwroot\lib\splide-4.1.3\.github\ISSUE_TEMPLATE\BUG_REPORT.yml" />
+    <None Include="wwwroot\lib\splide-4.1.3\.github\ISSUE_TEMPLATE\config.yml" />
+    <None Include="wwwroot\lib\splide-4.1.3\.github\pull_request_template.md" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\css\" />
+  </ItemGroup>
+
 </Project>

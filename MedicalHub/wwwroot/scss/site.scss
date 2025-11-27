@@ -1,0 +1,13 @@
+$primary: #00327D;
+$secondary: #434343;
+$danger: #ED1A1A;
+$success: #00C4AE;
+$warning: #FFD64E;
+$info: #3498DB;
+$dark: #222222;
+
+@import "../lib/bootstrap/scss/bootstrap.scss";
+
+nav ul li a{
+    color: $dark !important;
+}
