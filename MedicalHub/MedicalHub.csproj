@@ -7,15 +7,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="wwwroot\lib\splide-4.1.3\**" />
+    <Content Remove="wwwroot\lib\splide-4.1.3\**" />
+    <EmbeddedResource Remove="wwwroot\lib\splide-4.1.3\**" />
+    <None Remove="wwwroot\lib\splide-4.1.3\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Remove="compilerconfig.json" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="compilerconfig.json" />
-    <None Include="wwwroot\lib\splide-4.1.3\.github\FUNDING.yml" />
-    <None Include="wwwroot\lib\splide-4.1.3\.github\ISSUE_TEMPLATE\BUG_REPORT.yml" />
-    <None Include="wwwroot\lib\splide-4.1.3\.github\ISSUE_TEMPLATE\config.yml" />
-    <None Include="wwwroot\lib\splide-4.1.3\.github\pull_request_template.md" />
   </ItemGroup>
 
   <ItemGroup>

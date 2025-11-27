@@ -11862,3 +11862,11 @@ textarea.form-control-lg {
 nav ul li a {
   color: #222222 !important;
 }
+
+footer {
+  background: #0E4A9C;
+  background: linear-gradient(180deg, rgb(14, 74, 156) 0%, rgb(108, 179, 240) 100%);
+}
+footer nav ul li a {
+  color: #f8f9fa !important;
+}

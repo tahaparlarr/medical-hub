@@ -11,3 +11,12 @@ $dark: #222222;
 nav ul li a{
     color: $dark !important;
 }
+
+footer {
+    background: #0E4A9C;
+    background: linear-gradient(180deg,rgba(14, 74, 156, 1) 0%, rgba(108, 179, 240, 1) 100%);
+
+    nav ul li a {
+        color: $light !important;
+    }
+}
