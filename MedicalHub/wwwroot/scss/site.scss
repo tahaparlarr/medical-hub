@@ -1,3 +1,6 @@
+@import "../lib/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+
 $primary: #00327D;
 $secondary: #434343;
 $danger: #ED1A1A;
@@ -6,17 +9,55 @@ $warning: #FFD64E;
 $info: #3498DB;
 $dark: #222222;
 
-@import "../lib/bootstrap/scss/bootstrap.scss";
-
-nav ul li a{
-    color: $dark !important;
+body {
+    font-family: "Wix Madefor Display", sans-serif;
 }
 
-footer {
+header nav ul li a {
+    color: $light !important;
+    transition: all ease-in-out 0.3s;
+
+    &:hover {
+        color: $black !important;
+        transition: all ease-in-out 0.3s;
+    }
+}
+
+.hero-bg {
+    background: #012152;
+    background: linear-gradient(90deg,rgba(1, 33, 82, 1) 0%, rgba(1, 37, 92, 1) 17%, rgba(0, 42, 104, 1) 28%, rgba(0, 50, 125, 1) 39%, rgba(25, 70, 137, 1) 46%, rgba(62, 100, 156, 1) 53%, rgba(117, 144, 184, 1) 62%, rgba(168, 185, 210, 1) 81%, rgba(232, 237, 243, 1) 93%, rgba(255, 255, 255, 1) 100%);
+
+    button {
+        transition: all ease-in-out 0.4s;
+    }
+
+        button:hover {
+            transition: all ease-in-out 0.4s;
+            transform: scale(1.1)
+        }
+}
+
+.btn {
+    @extend .rounded-pill;
+    @extend .px-4;
+    @extend .py-2;
+    @extend .border-0;
+    transition: all ease-in-out 0.4s;
+}
+
+.btn-light:hover {
+    background: $black;
+    color: $light;
+    transition: all ease-in-out 0.4s;
+}
+
+
+/*footer {
     background: #0E4A9C;
     background: linear-gradient(180deg,rgba(14, 74, 156, 1) 0%, rgba(108, 179, 240, 1) 100%);
 
     nav ul li a {
         color: $light !important;
     }
-}
+}*/
+

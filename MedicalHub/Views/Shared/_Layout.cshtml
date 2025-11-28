@@ -12,39 +12,39 @@
     <link rel="stylesheet" href="~/MedicalHub.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header class="shadow-sm mb-3">
-        <div class="container py-2">
+
+    <header class="position-absolute top-0 w-100 z-3">
+        <div class="container py-4">
             <div class="d-flex justify-content-between align-items-center">
 
-                <div class="logo">
-                    <a href="#">
-                        <img src="/images/logo.svg" width="140" alt="Logo" />
+                <div class="d-flex align-items-center">
+                    <a href="#" class="logo pe-5 d-inline-block">
+                        <img src="/images/light-logo.svg" width="140" alt="Logo">
                     </a>
+
+                    <nav class="main-nav">
+                        <ul class="nav gap-3">
+                            <li class="nav-item"><a class="nav-link" href="#">E-Kütüphane</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Medikal Hesaplayıcılar</a></li>
+                            <li class="nav-item"><a class="nav-link" href="#">Videolar</a></li>
+                        </ul>
+                    </nav>
                 </div>
 
                 <nav>
-                    <ul class="nav gap-3">
-                        <li class="nav-item"><a class="nav-link" href="#">E-Kütüphane</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Medikal Hesaplayıcılar</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#">Videolar</a></li>
-                    </ul>
+                    <button class="btn btn-light">Giriş Yap</button>
                 </nav>
 
-                <nav>
-                    <ul class="nav d-flex gap-1">
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-person"></i> Giriş Yap</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><i class="bi bi-search"></i> Ara</a></li>
-                    </ul>
-                </nav>
             </div>
         </div>
     </header>
+
 
     <main role="main" class="pb-3">
         @RenderBody()
     </main>
 
-    <footer class="bg-secondary">
+    @*     <footer class="bg-secondary">
         <div class="container">
             <div class="row py-4">
                 <div class="d-flex align-items-center justify-content-between">
@@ -112,6 +112,7 @@
             </div>
         </div>
     </footer>
+    *@
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
