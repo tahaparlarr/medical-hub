@@ -5,6 +5,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap");
 :root,
 [data-bs-theme=light] {
   --bs-blue: #0d6efd;
@@ -11860,6 +11861,14 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.f-wix {
+  font-family: "Wix Madefor Display", sans-serif;
+}
+
+.f-inst {
+  font-family: "Instrument Sans", sans-serif;
+}
+
 body {
   font-family: "Wix Madefor Display", sans-serif;
 }
@@ -11877,12 +11886,16 @@ header nav ul li a:hover {
   background: #012152;
   background: linear-gradient(90deg, rgb(1, 33, 82) 0%, rgb(1, 37, 92) 17%, rgb(0, 42, 104) 28%, rgb(0, 50, 125) 39%, rgb(25, 70, 137) 46%, rgb(62, 100, 156) 53%, rgb(117, 144, 184) 62%, rgb(168, 185, 210) 81%, rgb(232, 237, 243) 93%, rgb(255, 255, 255) 100%);
 }
-.hero-bg button {
+.hero-bg a {
   transition: all ease-in-out 0.4s;
 }
-.hero-bg button:hover {
+.hero-bg a:hover {
   transition: all ease-in-out 0.4s;
   transform: scale(1.1);
+}
+
+.content-section {
+  margin-top: -30px;
 }
 
 .btn {
