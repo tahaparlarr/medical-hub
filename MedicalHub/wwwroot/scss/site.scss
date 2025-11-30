@@ -1,7 +1,3 @@
-@import "../lib/bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
-
 $primary: #00327D;
 $secondary: #434343;
 $danger: #ED1A1A;
@@ -9,6 +5,10 @@ $success: #00C4AE;
 $warning: #FFD64E;
 $info: #3498DB;
 $dark: #222222;
+
+@import "../lib/bootstrap/scss/bootstrap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
 
 .f-wix {
     font-family: "Wix Madefor Display", sans-serif;
@@ -32,22 +32,32 @@ header nav ul li a {
     }
 }
 
+
 .hero-bg {
     background: #012152;
     background: linear-gradient(90deg,rgba(1, 33, 82, 1) 0%, rgba(1, 37, 92, 1) 17%, rgba(0, 42, 104, 1) 28%, rgba(0, 50, 125, 1) 39%, rgba(25, 70, 137, 1) 46%, rgba(62, 100, 156, 1) 53%, rgba(117, 144, 184, 1) 62%, rgba(168, 185, 210, 1) 81%, rgba(232, 237, 243, 1) 93%, rgba(255, 255, 255, 1) 100%);
-
-    a {
-        transition: all ease-in-out 0.4s;
-    }
-
-        a:hover {
-            transition: all ease-in-out 0.4s;
-            transform: scale(1.1)
-        }
 }
+
+.scale-inner {
+    transition: 0.3s ease;
+}
+
+    .scale-inner:hover {
+        transition: 0.3s ease;
+        transform: scale(1.16);
+    }
 
 .content-section {
     margin-top: -30px;
+    padding: calc(80px + 6vw) calc(30px + 3vw) calc(20px + 1vw);
+}
+
+.footer-section {
+    padding: 72px calc(30px + 3vw) 0;
+}
+
+.section-highlight {
+    font-weight: 500;
 }
 
 .btn {
@@ -64,13 +74,78 @@ header nav ul li a {
     transition: all ease-in-out 0.4s;
 }
 
+.btn-dark:hover {
+    background: $primary;
+    color: $light;
+    transition: all ease-in-out 0.4s;
+}
 
-/*footer {
-    background: #0E4A9C;
-    background: linear-gradient(180deg,rgba(14, 74, 156, 1) 0%, rgba(108, 179, 240, 1) 100%);
+#splide1 .splide__slide img {
+    @extend .rounded-3;
+    height: clamp(180px, 25vw, 400px);
+    width: 100%;
+    object-fit: cover;
+}
 
-    nav ul li a {
-        color: $light !important;
+.toggle-btn {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+    .toggle-btn .line {
+        position: absolute;
+        width: 25px;
+        height: 1px;
+        background-color: #fff;
+        transition: all 0.3s ease;
     }
-}*/
 
+    .toggle-btn .horizontal {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .toggle-btn .vertical {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .toggle-btn.active .horizontal {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    .toggle-btn.active .vertical {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+.toggle-text {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    color: #fff;
+}
+
+    .toggle-text.show {
+        transition: all 0.3s ease;
+        opacity: 1;
+        max-height: 100px;
+    }
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    display: inherit;
+    border-radius: 16px;
+    background: rgba(0,0,0,0.2);
+}
