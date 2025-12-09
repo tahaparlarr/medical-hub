@@ -1,14 +1,5 @@
-$primary: #00327D;
-$secondary: #434343;
-$danger: #ED1A1A;
-$success: #00C4AE;
-$warning: #FFD64E;
-$info: #3498DB;
-$dark: #222222;
-
-@import "../lib/bootstrap/scss/bootstrap.scss";
-@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+@import '_variables.scss';
+@import '_mixins.scss';
 
 .f-wix {
     font-family: "Wix Madefor Display", sans-serif;
@@ -31,7 +22,6 @@ header nav ul li a {
         transition: all ease-in-out 0.3s;
     }
 }
-
 
 .hero-bg {
     background: #012152;

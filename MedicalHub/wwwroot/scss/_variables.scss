@@ -1,0 +1,15 @@
+@import "../lib/bootstrap/scss/functions";
+
+$primary: #00327D;
+$secondary: #434343;
+$danger: #ED1A1A;
+$success: #00C4AE;
+$warning: #FFD64E;
+$info: #3498DB;
+$dark: #222222;
+
+@import "../lib/bootstrap/scss/variables";
+@import "../lib/bootstrap/scss/bootstrap";
+
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');

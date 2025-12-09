@@ -2,6 +2,11 @@
   {
     "inputFile": "wwwroot/scss/site.scss",
     "outputFile": "wwwroot/css/site.css",
-    "minify": {"enabled": true}
+    "minify": { "enabled": true }
+  },
+  {
+    "inputFile": "wwwroot/scss/admin.scss",
+    "outputFile": "wwwroot/css/admin.css",
+    "minify": { "enabled": true }
   }
 ]

@@ -22,11 +22,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="BuildWebCompiler" Version="1.12.405" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\css\" />
+    <PackageReference Include="BuildWebCompiler2022" Version="1.14.15" />
   </ItemGroup>
 
 </Project>
