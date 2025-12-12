@@ -11870,6 +11870,7 @@ textarea.form-control-lg {
 }
 
 body {
+  background-color: #030712;
   font-family: "Wix Madefor Display", sans-serif;
 }
 
@@ -11877,14 +11878,6 @@ body {
   transition: all ease-in-out 0.4s;
 }
 
-.btn-light:hover {
-  background: #000;
-  color: #f8f9fa;
-  transition: all ease-in-out 0.4s;
-}
-
-.btn-dark:hover {
-  background: #00327D;
-  color: #f8f9fa;
-  transition: all ease-in-out 0.4s;
+header ul li a {
+  color: white !important;
 }

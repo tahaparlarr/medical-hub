@@ -15,9 +15,53 @@
 </head>
 
 <body>
-    <main role="main" class="pb-3">
-        @RenderBody()
-    </main>
+    <div class="container-fluid">
+        <div class="row">
+            <header class="col-md-3 col-lg-2 px-0 border-end border-secondary min-vh-100 d-none d-md-block">
+
+                <nav class="d-flex flex-column align-items-start p-3 min-vh-100">
+
+                    <a href="/" class="navbar-brand w-100 mb-4 px-3">
+                        <img src="~/images/light-logo.svg" width="120" alt="Logo" />
+                    </a>
+
+                    <ul class="nav nav-pills flex-column mb-auto w-100" id="menu">
+                        <li class="nav-item w-100 mb-1">
+                            <a asp-controller="Slider" asp-action="Index" is-active-route class="nav-link align-middle">
+                                <i class="bi-file"></i> <span class="ms-2">Slider</span>
+                            </a>
+                        </li>
+                        <li class="nav-item w-100 mb-1">
+                            <a asp-controller="Article" asp-action="Index" is-active-route class="nav-link align-middle">
+                                <i class="bi-book"></i> <span class="ms-2">Yazılar</span>
+                            </a>
+                        </li>
+                        <li class="nav-item w-100 mb-1">
+                            <a asp-controller="Product" asp-action="Index" is-active-route class="nav-link align-middle">
+                                <i class="bi-bag"></i> <span class="ms-2">Ürünler</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <hr class="w-100 text-secondary my-3">
+
+                    <ul class="nav nav-pills flex-column w-100">
+                        <li class="nav-item w-100">
+                            <a asp-controller="Profile" asp-action="Index" is-active-route class="nav-link align-middle">
+                                <i class="bi-person"></i> <span class="ms-2">Profil</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                </nav>
+            </header>
+
+            <div class="col py-3">
+                @RenderBody()
+            </div>
+
+        </div>
+    </div>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -28,6 +72,5 @@
         AOS.init();
     </script>
     @await RenderSectionAsync("Scripts", required: false)
-
 </body>
 </html>
