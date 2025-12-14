@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using MedicalHub.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace MedicalHub.Areas.Admin.Controllers;
 
@@ -9,4 +10,22 @@ public class SliderController : Controller
     {
         return View();
     }
+
+    public IActionResult Create()
+    {
+        return View();
+    }
+
+    //public Task<IActionResult> Create(Slider model)
+    //{
+    //    if (model == null)
+    //    {
+    //        return BadRequest();
+    //    }
+    //    else
+    //    {
+    //        Id = model.Id;
+
+    //    }
+    //}
 }

@@ -7,8 +7,12 @@ $success: #00C4AE;
 $warning: #FFD64E;
 $info: #3498DB;
 $dark: #222222;
+$mirage: #141A28;
 
 @import "../lib/bootstrap/scss/variables";
+
+$theme-colors: map-merge($theme-colors, ("mirage": $mirage));
+
 @import "../lib/bootstrap/scss/bootstrap";
 
 @import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400..800&display=swap');

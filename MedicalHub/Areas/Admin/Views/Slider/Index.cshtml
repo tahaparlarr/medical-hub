@@ -1,5 +1,32 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="row mb-3">
+    <div class="d-flex justify-content-between ">
+        <h4 class="text-light">
+            Slider  Yönetimi
+        </h4>
+        <a asp-controller="Slider" asp-action="Create" class="btn btn-light">
+            + Yeni Slider Ekle
+        </a>
+    </div>
+</div>
+
+<section>
+    <div class="d-flex align-items-center justify-content-between bg-mirage border border-secondary w-100 rounded-2 p-3 mb-3">
+        <div class="d-flex align-items-center gap-3 text-light">
+            <img src="/images/blog1.jpg" class="rounded-3" width="120" />
+            Ana Sayfa Kampanya 1
+        </div>
+
+        <div class="d-flex gap-2">
+            <a asp-controller="Slider" asp-action="Edit">
+                <div class="d-flex align-items-center justify-content-center border border-secondary rounded-3" style="width: 40px; height: 40px;">
+                    <i class="bi bi-pencil text-light"></i>
+                </div>
+            </a>
+            <a asp-controller="Slider" asp-action="Delete">
+                <div class="d-flex align-items-center justify-content-center border border-secondary rounded-3 bg-danger " style="width: 40px; height: 40px;">
+                    <i class="bi bi-trash text-light"></i>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>

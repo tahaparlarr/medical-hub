@@ -21,6 +21,18 @@ body {
     transition: all ease-in-out 0.4s;
 }
 
+.btn-light:hover {
+    background: $black;
+    color: $light;
+    transition: all ease-in-out 0.4s;
+}
+
+.btn-dark:hover {
+    background: $primary;
+    color: $light;
+    transition: all ease-in-out 0.4s;
+}
+
 header ul li a{
     color: white !important;
 }
