@@ -14,7 +14,7 @@ body {
 }
 
 .btn {
-    @extend .rounded-pill;
+    @extend .rounded-3;
     @extend .px-4;
     @extend .py-2;
     @extend .border-0;
@@ -33,6 +33,31 @@ body {
     transition: all ease-in-out 0.4s;
 }
 
-header ul li a{
+header ul li a {
     color: white !important;
+}
+
+.border-dashed {
+    border-style: dashed !important;
+}
+
+.form-control {
+    color: $light;
+    border-color: $secondary;
+    background-color: transparent !important;
+
+    &::placeholder{
+        color: $secondary;
+    }
+
+    &:focus{
+        border-color: $light;
+        color: $light;
+    }
+}
+
+.drag-over {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: $light !important;
+    border-style: solid !important;
 }

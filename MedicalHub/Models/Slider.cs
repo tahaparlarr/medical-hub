@@ -4,7 +4,7 @@ namespace MedicalHub.Models;
 public class Slider
 {
     public Guid Id { get; set; }
-    public string Title { get; set; }
+    public string? Title { get; set; }
     public byte[] Image { get; set; }
     public string? LinkUrl { get; set; }
     public bool IsActive { get; set; } = true;

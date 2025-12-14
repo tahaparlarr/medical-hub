@@ -60,3 +60,35 @@ document.querySelectorAll(".service-block").forEach(block => {
         toggle();
     });
 });
+
+// File Drop Zone
+const dropZone = document.getElementById('dropZone');
+const fileInput = document.getElementById('fileInput');
+const dropContent = document.getElementById('dropContent');
+
+dropZone.onclick = () => fileInput.click();
+
+fileInput.onchange = () => {
+    if (fileInput.files[0]) showPreview(fileInput.files[0].name);
+};
+
+dropZone.ondragover = (e) => { e.preventDefault(); dropZone.classList.add('drag-over'); };
+dropZone.ondragleave = () => dropZone.classList.remove('drag-over');
+
+dropZone.ondrop = (e) => {
+    e.preventDefault();
+    dropZone.classList.remove('drag-over');
+
+    if (e.dataTransfer.files[0]) {
+        fileInput.files = e.dataTransfer.files;
+        showPreview(e.dataTransfer.files[0].name);
+    }
+};
+
+const showPreview = (fileName) => {
+    dropContent.innerHTML = `
+        <i class="bi bi-check-circle-fill text-success fs-1"></i>
+        <div class="mt-2 fs-6">${fileName}</div>
+        <div class="text-secondary small mt-1">Yüklemeye hazır</div>
+    `;
+};
