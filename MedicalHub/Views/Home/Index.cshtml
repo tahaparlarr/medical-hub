@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<Slider>
+@{
     ViewData["Title"] = "Nobelyum";
 }
 
@@ -54,16 +55,14 @@
         <div id="splide1" class="splide py-5">
             <div class="splide__track">
                 <ul class="splide__list">
-                    <li class="splide__slide">
-                        <a href="#" target="_blank">
-                            <img class="img-fluid" src="/images/slider1.jpg" alt="" />
-                        </a>
-                    </li>
-                    <li class="splide__slide">
-                        <a href="#" target="_blank">
-                            <img class="img-fluid rounded-3" src="/images/slider2.jpg" alt="" />
-                        </a>
-                    </li>
+                    @foreach(var slider in Model)
+                    {
+                        <li class="splide__slide">
+                            <a href="@(string.IsNullOrEmpty(slider.LinkUrl) ? "#" : slider.LinkUrl)" target="_blank">
+                                <img class="img-fluid" src="@Url.Action("GetSliderImage", "Media", new {id = slider.Id})" alt="@slider.Title" />
+                            </a>
+                        </li>
+                    }
                 </ul>
             </div>
         </div>

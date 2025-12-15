@@ -1,14 +1,18 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using MedicalHub.Models;
+using MedicalHub.Data;
+using Microsoft.EntityFrameworkCore;
 
 namespace MedicalHub.Controllers;
 
-public class HomeController : Controller
+public class HomeController(ApplicationDbContext db) : Controller
 {
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        return View();
+        var sliders = await db.Sliders.Where(p => p.IsActive).OrderBy(p=>p.Order).ToListAsync();
+
+        return View(sliders);
     }
 
     public IActionResult Privacy()

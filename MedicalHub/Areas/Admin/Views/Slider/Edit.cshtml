@@ -1,18 +1,21 @@
-﻿@model MedicalHub.Models.Slider
+﻿@model MedicalHub.ViewModels.SliderViewModel
 
 <div class="row mb-5">
     <div class="d-flex justify-content-between ">
         <h4 class="text-light">
-            Slider Ekle
+            Slider Düzenle
         </h4>
     </div>
 </div>
 
 <section>
-    <form asp-action="Create" method="post" enctype="multipart/form-data">
+    <form asp-action="Edit" method="post" enctype="multipart/form-data">
         <div class="bg-mirage border border-secondary rounded-3 w-100 p-5">
             <div class="row mb-5">
                 <div class="col-6">
+
+                    <input type="hidden" asp-for="Id" />
+
                     <div class="mb-3">
                         <label for="title" class="form-label text-light">Başlık</label>
                         <input asp-for="Title" type="text" id="title" class="form-control" placeholder="Slider Başlığı" />
