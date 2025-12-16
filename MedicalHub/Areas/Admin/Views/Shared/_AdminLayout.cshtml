@@ -26,18 +26,23 @@
 
                     <ul class="nav nav-pills flex-column mb-auto w-100" id="menu">
                         <li class="nav-item w-100 mb-1">
+                            <a asp-controller="Dashboard" asp-action="Index" is-active-route class="nav-link align-middle">
+                                <i class="bi bi-columns-gap"></i><span class="ms-2">Yönetici Paneli</span>
+                            </a>
+                        </li>
+                        <li class="nav-item w-100 mb-1">
                             <a asp-controller="Slider" asp-action="Index" is-active-route class="nav-link align-middle">
-                                <i class="bi-file"></i> <span class="ms-2">Slider</span>
+                                <i class="bi bi-file"></i><span class="ms-2">Slider</span>
                             </a>
                         </li>
                         <li class="nav-item w-100 mb-1">
                             <a asp-controller="Article" asp-action="Index" is-active-route class="nav-link align-middle">
-                                <i class="bi-book"></i> <span class="ms-2">Yazılar</span>
+                                <i class="bi bi-book"></i><span class="ms-2">Yazılar</span>
                             </a>
                         </li>
                         <li class="nav-item w-100 mb-1">
                             <a asp-controller="Product" asp-action="Index" is-active-route class="nav-link align-middle">
-                                <i class="bi-bag"></i> <span class="ms-2">Ürünler</span>
+                                <i class="bi bi-bag"></i><span class="ms-2">Ürünler</span>
                             </a>
                         </li>
                     </ul>
@@ -47,7 +52,7 @@
                     <ul class="nav nav-pills flex-column w-100">
                         <li class="nav-item w-100">
                             <a asp-controller="Profile" asp-action="Index" is-active-route class="nav-link align-middle">
-                                <i class="bi-person"></i> <span class="ms-2">Profil</span>
+                                <i class="bi bi-person"></i> <span class="ms-2">Profil</span>
                             </a>
                         </li>
                     </ul>
